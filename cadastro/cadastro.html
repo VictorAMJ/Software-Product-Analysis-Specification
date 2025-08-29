@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <form action="/cadastrar">
+        <h1>Cadastre-se</h1>
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" placeholder="Nome completo" required> 
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
+        <br><br>
+
+        <label for="password">Senha:</label>
+        <input type="password" name="password" id="password" placeholder="Digite sua senha" required> 
+        <br><br>
+
+        <label for="confirm_password">Confirme a senha:</label>
+        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirme sua senha" required>
+        <br><br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" placeholder="123.456.789-01" required>
+        <br><br>
+
+        <label for="telephone">Telefone:</label>
+        <input type="tel" name="telephone" id="telephone" placeholder="(01) 23456-7890" required>
+        <br><br>
+        
+        <button type="submit">Cadastrar</button>
+
+    </form>
+
+</body>
+</html>
