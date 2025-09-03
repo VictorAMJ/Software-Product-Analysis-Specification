@@ -6,13 +6,28 @@ cadastro = Blueprint('cadastro', __name__)
 @cadastro.route("/cadastrar", methods=["POST"])
 def create_cadastro():
     try:
+        senha = request.form.get("password")
+        confirmar_senha = request.form.get("confirm_password")
+        cpf = "".join(filter(str.isdigit, request.form.get("cpf", "")))
+        tel = "".join(filter(str.isdigit, request.form.get("telephone", "")))
+
+        if senha != confirmar_senha:
+            return jsonify({"erro": "As senhas são diferentes!"}), 400
+
+        if not cpf.isdigit() or len(cpf) != 11:
+            return jsonify({"erro": "CPF invalido. Deve conter 11 números."}), 400
+        
+        if not tel.isdigit() or len(tel) not in [10, 11]:
+            return jsonify({"erro": "Telefone invalido. Verifique a quantidade de números"}), 400
+
         dados = {
             "nome": request.form.get("name"),
             "email": request.form.get("email"),
-            "senha": request.form.get("password"),
-            "cpf": request.form.get("cpf"),
-            "telefone": request.form.get("telephone")
+            "senha": senha,
+            "cpf": cpf,
+            "telefone": tel
         }
+        
         resposta, status_code = criar_cadastro(dados)
         return jsonify(resposta), status_code
     except Exception as e:
