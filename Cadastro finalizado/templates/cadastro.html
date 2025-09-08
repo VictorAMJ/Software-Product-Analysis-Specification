@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='cadastro.css')}}">
 </head>
 <body>
-    <form action="http://127.0.0.1:5000/cadastrar" method="POST">
+    <form action="/cadastrar" method="POST">
         <h1>Cadastre-se</h1>
         <label for="name">Nome:</label>
         <input type="text" name="name" id="name" placeholder="Nome completo" required> 

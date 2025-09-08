@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql_hotel
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: hotel123
+      MYSQL_DATABASE: hotel_sustentavel
+      MYSQL_USER: userhotel
+      MYSQL_PASSWORD: hotelpass
+    ports:
+      - "3380:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
