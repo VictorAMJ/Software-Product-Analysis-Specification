@@ -8,8 +8,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: hotel123
       MYSQL_DATABASE: hotel_sustentavel
-      MYSQL_USER: userhotel
-      MYSQL_PASSWORD: hotelpass
     ports:
       - "3380:3306"
     volumes:
