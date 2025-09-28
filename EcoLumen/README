@@ -26,4 +26,10 @@
     ```
     http://127.0.0.1:5000
     ```
- 
+
+## Observações
+
+- CPF: 11 números  
+- Telefone: 10 ou 11 números  
+- Senha e confirmação devem coincidir  
+- O banco PostgreSQL está hospedado online no Render, então **não é necessário criar conta lá**.

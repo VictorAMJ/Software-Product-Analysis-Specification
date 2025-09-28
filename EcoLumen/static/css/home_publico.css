@@ -1,0 +1,91 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, #fefae0, #d9f0e7);
+    padding: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+.home_publica_container1 header {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(1, 113, 67, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.home_publica_container1 header:hover {
+    transform: translateY(-3px);
+}
+
+.home_publica_container1 header h1 {
+    font-size: 50px;
+    color: #017143;
+    margin-bottom: 15px;
+}
+
+.home_publica_container1 header p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.links .btn {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #017143, #02a36f);
+    padding: 14px 28px;
+    margin: 0 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.links .btn:hover {
+    background: linear-gradient(45deg, #014d35, #01644d);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.img_hotel img {
+    width: 50%;
+    max-width: 550px;
+    border-radius: 20px;
+    margin: 10px 0;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img_hotel img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.home_publica_container2 {
+    background: rgba(1, 113, 67, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.home_publica_container2:hover {
+    transform: translateY(-3px);
+}
+
+.home_publica_container2 h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #017143;
+}
+
+.home_publica_container2 p {
+    font-size: 16px;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #333;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/reserva.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epunda+Sans:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Reserva de Quarto</title>
+</head>
+
+<body>
+    <div class="reserva-container">
+        <div id="quarto-detalhe" class="quarto-detalhe">
+            <div class="caixa-texto">
+                <h1 id="titulo-quarto">Selecione um quarto</h1>
+                <p id="descricao-quarto">Clique em um quarto a abaixo para ver mais detalhes.</p>
+                 <button id="btn-reservar" onclick="abrirFormulario()">Reservar</button>
+            </div>
+
+            <div class="caixa-imagem">
+                <img id="imagem-principal" src="{{ url_for('static', filename='img/Quartinho1.png')}}" alt="Quarto selecionado">
+            </div>
+        </div>
+
+        <div class="menu-quartos">
+            <img src="{{ url_for('static', filename='img/Quartinho1.png')}}" onclick="trocaImagem('static/img/Quarto1.png', 'Suíte <span>Contemporânea</span>', 'Com 28 m², esta suíte combina conforto e design minimalista. Equipada com cama king size, grandes janelas com vista para o jardim e decoração natural com plantas tropicais. O ambiente em tons de madeira clara e verde transmite frescor e bem-estar, ideal para quem busca relaxar em harmonia com a natureza.')">
+            <img src="{{ url_for('static', filename='img/Quartinho2.png')}}" onclick="trocaImagem('static/img/Quarto2.png', 'Suíte Rústica com <span>Vista Panorâmica</span>', 'Charmosa suíte de 24 m², com teto de madeira e decoração aconchegante. Dispõe de cama queen size, janelas amplas que revelam a paisagem das montanhas e iluminação suave para noites tranquilas. Perfeita para quem aprecia a rusticidade com um toque de romantismo.')">
+            <img src="{{ url_for('static', filename='img/Quartinho3.png')}}" onclick="trocaImagem('static/img/Quarto3.png', 'Suite Vista da <span>Montanha</span>', 'Aconchegante quarto de 26 m² com cama de casal e varanda envidraçada que proporciona vista exclusiva para as montanhas. O piso de madeira e a iluminação natural criam um ambiente acolhedor, perfeito para descansar em contato com a natureza.')">
+            <img src="{{ url_for('static', filename='img/Quartinho4.png')}}" onclick="trocaImagem('static/img/Quarto4.png', 'Suite Design <span>Moderno</span>', 'Espaçosa suíte de 30 m² com estilo sofisticado e minimalista. Equipada com cama king size, iluminação em LED embutida e amplas janelas que dão vista para o jardim vertical. Uma experiência de hospedagem que une conforto, tecnologia e elegância.')">
+            <img src="{{url_for('static', filename='img/Quartinho5.png')}}" onclick="trocaImagem('static/img/Quarto5.png', 'Suite Floresta <span>Premium</span>', 'Suíte de 32 m² com decoração orgânica e parede viva de musgo natural. Oferece cama king size, sala de estar integrada e varanda privativa com vista para a floresta. Um refúgio exclusivo para quem busca luxo em meio à natureza.')">
+        </div>
+        
+        <div id="form-reserva" class="formulario">
+            <h2>Reserva de Quarto</h2>
+            <p><b>Quarto selecionado:</b> <span id="quarto-selecionado"></span></p>
+            <form id="reservaForm" action="{{ url_for('reserva_bp.pagina_reserva') }}" method="POST">
+                <label>Nome: <input type="text" id="nome" name="nome" required></label><br>
+                <label>E-mail: <input type="email" id="email" name="email" required></label><br>
+                <input type="hidden" id="quarto" name="quarto">
+                <label>Check-in: <input type="date" id="checkIn" name="checkIn" required></label><br>
+                <label>Check-out: <input type="date" id="checkOut" name="checkOut" required></label><br>
+                <label>Número de Hóspedes: <input type="number" id="hospedes" name="hospedes" min="1" max="4" value="1" required></label><br>
+                <button type="submit">Confirmar Reserva</button>
+            </form>
+            <div id="mensagem"></div>
+        </div>
+
+    </div>
+
+</body>
+<script src="{{url_for('static', filename='js/reserva.js')}}"></script>
+</html>

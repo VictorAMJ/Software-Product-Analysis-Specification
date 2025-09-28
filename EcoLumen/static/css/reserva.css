@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    background-color: #fefae0;
+}
+
+.reserva-container {
+    width: 100%;
+}
+
+.quarto-detalhe {
+    width: 100%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.caixa-texto {
+    width: 600px;
+}
+
+h1 {
+    color: #333333;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+span {
+    color: #017143;
+    font-weight: 900;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+#btn-reservar {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #017143;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btn-reservar:hover {
+    background-color: #014d34;
+    transform: scale(1.05);
+}
+
+.caixa-imagem {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+#imagem-principal {
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-quartos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-quartos img {
+    width: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.menu-quartos img:hover {
+    transform: translateY(-10px);
+}
+
+.menu-quartos img.selecionado {
+    outline: 3px solid #017143;
+    transform: scale(1.1);
+}
+
+.formulario {
+    display: none;
+    background-color: #ffffff;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.formulario h2 {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.formulario label{
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.formulario button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #017143;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3 ease, tranform 0.2 ease;
+}
+
+.formulario button:hover {
+    background-color: #014d34;
+    transform: scale(1.05);
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
