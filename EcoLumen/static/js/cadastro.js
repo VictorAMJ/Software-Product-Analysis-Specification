@@ -1,6 +1,6 @@
 const form = document.getElementById('formulario_cadastro')
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', async function (event) {
     event.preventDefault()
 
     let nome = document.getElementById('name').value;
@@ -29,15 +29,24 @@ form.addEventListener('submit', function (event) {
 
     const formData = new FormData(form)
 
-    fetch('/cadastrar', {
-        method: 'POST',
-        body: formData
-    })
-    .then(respostaHTTP => respostaHTTP.text())
-    .then(mensagemServidor => {
-        alert(mensagemServidor)    
-    })
-    .catch(erroHTTP => {
-        alert("Erro ao enviar cadastro!" + erroHTTP.message)
-    })
+    try {
+        const resposta = await fetch('/cadastrar', {
+            method: 'POST',
+            body: formData
+        })
+        
+        const mensagem = await resposta.text()
+
+        if (resposta.status === 200) {
+            alert(mensagem)
+            form.reset()
+            window.location.href = "/"
+        } else {
+            alert(mensagem)
+            form.reset()
+        }
+
+    } catch (erro) {
+        alert("Erro ao cadastrar:" + erro.mensagem)
+    }
 })

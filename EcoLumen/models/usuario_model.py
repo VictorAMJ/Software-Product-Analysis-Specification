@@ -45,7 +45,16 @@ def buscar_usuario_email(email):
     resultado = cursor.fetchone()
     cursor.close()
     conexao.close()
-    return resultado
+    return bool(resultado)
+
+def buscar_usuario_cpf(cpf):
+    conexao = bd_config()
+    cursor = conexao.cursor()
+    cursor.execute("SELECT id FROM usuarios WHERE cpf = %s", (cpf,))
+    resultado = cursor.fetchone()
+    cursor.close()
+    conexao.close()
+    return bool(resultado)
 
 def listar_usuarios():
     conexao = bd_config()
