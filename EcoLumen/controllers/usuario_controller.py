@@ -32,9 +32,10 @@ def login_usuario(request):
         usuario = buscar_usuario_email(email)
         if usuario and usuario[1] == senha:
             session["email"] = usuario[0]
-            return redirect("/home")
+            return "Login realizado com sucesso!"
         else:
             return "Email ou senha incorretos!"
+        
     return render_template("usuario/login.html")
 
 def lista_usuarios_html():
