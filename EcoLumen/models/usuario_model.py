@@ -41,11 +41,11 @@ def inserir_usuario(nome, email, senha, cpf, telefone):
 def buscar_usuario_email(email):
     conexao = bd_config()
     cursor = conexao.cursor()
-    cursor.execute("SELECT email, senha FROM usuarios WHERE email = %s", (email,))
-    resultado = cursor.fetchone()
+    cursor.execute("SELECT id, email, senha FROM usuarios WHERE email = %s", (email,))
+    resultado = cursor.fetchone()  
     cursor.close()
     conexao.close()
-    return bool(resultado)
+    return resultado
 
 def buscar_usuario_cpf(cpf):
     conexao = bd_config()

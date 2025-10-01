@@ -39,7 +39,7 @@ def login_usuario(request):
         senha = request.form["senha"]
 
         usuario = buscar_usuario_email(email)
-        if usuario and usuario[1] == senha:
+        if usuario and usuario[2] == senha:
             session["email"] = usuario[0]
             return "Login realizado com sucesso!"
         else:

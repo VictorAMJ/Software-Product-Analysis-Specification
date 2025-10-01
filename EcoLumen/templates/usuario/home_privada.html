@@ -3,13 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Privado</title>
+    <title>Home Privada</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home_privada.css') }}">
 </head>
 <body>
-    <h1>Home privada</h1>
-    <p>Você está logado</p>
-    <a href="/logout" class="btn-logout">Sair</a>
+    <header>
+        <div class="header-content">
+            <h1>EcoLumen (logo do site)</h1>
+            <p>Bem-vindo, (nome do usuario)</p>
+        </div>
+            <a href="{{ url_for('usuario_bp.home_publica') }}" class="btn-logout">Sair</a>
+        
+    </header>
 
-    <h2>Apenas conteudo exclusivo para usuários logados.</h2>
+    <main>
+        <section class="welcome">
+            <h2>O que você fará hoje?</h2>
+        </section>
+
+        <section class="rota-buttons">
+            <a href="{{ url_for('reserva_bp.pagina_reserva') }}">
+                <button>
+                    <img src="{{ url_for('static', filename='img/reservas_icon.png') }}" alt="Suas Reservas">
+                    Suas reservas
+                </button>
+            </a>
+            <a href="#">
+                <button>
+                    <img src="{{ url_for('static', filename='img/cardapio_icon.png') }}" alt="Cardápio Digital">
+                    Cardápio digital
+                </button>
+            </a>
+            <a href="#">
+                <button>
+                    <img src="{{ url_for('static', filename='img/atividades_icon.png') }}" alt="Atividades">
+                    Atividades recreativas
+                </button>
+            </a>
+            <a href="#">
+                <button>
+                    <img src="{{ url_for('static', filename='img/inscritas_icon.png') }}" alt="Atividades Inscritas">
+                    Atividades inscritas
+                </button>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        EcoLumen, um lugar calmo, confortável e conectado à natureza.
+    </footer>
 </body>
 </html>
