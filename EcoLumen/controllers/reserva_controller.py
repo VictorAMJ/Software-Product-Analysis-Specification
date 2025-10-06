@@ -1,5 +1,6 @@
 from flask import render_template, request, jsonify
-from models.reserva_model import nova_reserva, usuario_existe, conflito_quarto, listar_reservas
+from models.reserva_model import nova_reserva, usuario_existe, conflito_quarto, listar_reservas, listar_reservas_por_email
+from datetime import datetime
 
 def reservar(request):
     nome = request.form["nome"]
@@ -26,3 +27,22 @@ def lista_reservas_html():
         tabela_html += f"<tr><td>{u[0]}</td><td>{u[1]}</td><td>{u[2]}</td><td>{u[3]}</td><td>{u[4]}</td><td>{u[5]}</td><td>{u[6]}</td></tr>"
     tabela_html += "</table>"
     return tabela_html
+
+
+def checkin_reservado(email):
+    todas_reservas = listar_reservas_por_email(email)
+    hoje = datetime.now().date()
+    
+    reservas_futuras = [
+        r for r in todas_reservas 
+        if r[4] >= hoje
+    ]
+
+    reservas_futuras.sort(key=lambda r: r[4]) 
+    return reservas_futuras
+
+
+
+
+
+

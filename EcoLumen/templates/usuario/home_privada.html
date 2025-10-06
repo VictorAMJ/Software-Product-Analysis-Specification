@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Privada</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home_privada.css') }}">
+
+    <!--checkin-->
+    <script src="{{ url_for('static', filename='js/checkin.js') }}"></script>
 </head>
 <body>
     <header>
@@ -19,6 +22,12 @@
     <main>
         <section class="welcome">
             <h2>O que você fará hoje?</h2>
+        </section>
+
+        <!--checkin-->
+        <section id="checkin-section" class="checkin-container">
+            <h2>Check-in</h2>
+            <p id="mensagem-checkin">Carregando informações...</p>
         </section>
 
         <section class="rota-buttons">

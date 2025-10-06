@@ -72,3 +72,17 @@ def listar_reservas():
     conexao.close()
     return reservas
 
+def listar_reservas_por_email(email):
+    email = str(email)
+    conexao = bd_config()
+    cursor = conexao.cursor()
+    cursor.execute("""
+        SELECT id, nome, email, quarto, check_in, check_out, numero_hospedes
+        FROM reservas
+        WHERE email = %s
+        ORDER BY check_in ASC
+    """, (email,))
+    reservas = cursor.fetchall()
+    cursor.close()
+    conexao.close()
+    return reservas
