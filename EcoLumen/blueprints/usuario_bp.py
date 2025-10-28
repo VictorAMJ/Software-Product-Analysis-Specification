@@ -34,3 +34,7 @@ def logout():
     session.clear()
     return redirect(url_for("usuario_bp.login"))
 
+@usuario_bp.route("/saiba_mais")
+def saiba_mais():
+    return render_template("usuario/saiba_mais.html")
+
