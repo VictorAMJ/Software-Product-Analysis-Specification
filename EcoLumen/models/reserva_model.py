@@ -86,3 +86,18 @@ def listar_reservas_por_email(email):
     cursor.close()
     conexao.close()
     return reservas
+
+def verificar_reserva_por_data(email, dia_atividade):
+    email = str(email)
+    conexao = bd_config()
+    cursor = conexao.cursor()
+    cursor.execute("""
+        SELECT id, nome, email, quarto, check_in, check_out
+        FROM reservas
+        WHERE email = %s
+        AND %s BETWEEN check_in AND check_out
+    """, (email, dia_atividade))
+    reserva = cursor.fetchone()
+    cursor.close()
+    conexao.close()
+    return reserva

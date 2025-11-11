@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/atividade.css')}}">
+    <title>Atividades recreativas</title>
+</head>
+<body>
+    <div class="atividade-conteiner">
+        <div id="atividade-detalhe" class="atividade-detalhe">
+            <div class="caixa-de-texto">
+                <h1 id="titulo-atividade">Selecione uma atividade</h1>
+                <p id="descricao-atividade">Essa atividade é...</p>
+                <button id="btn-atividade" onclick="abrirFormulario()">Inscrever-se</button>
+            </div>
+
+            <div class="imagem">
+                <img src="{{url_for('static', filename='img/trilha.png')}}" alt="Atividade selecionada" id="img-principal">
+            </div>
+        </div>
+
+        <div class="menu-atividades">
+            <img src="{{ url_for('static', filename='img/trilha.png')}}" onclick="trocaImagem('static/img/trilha.png', 'Trilha Ecológica', 'Trilhas ecológicas guiadas, que percorrem áreas de mata nativa e apresentam a fauna e flora local.')">
+
+            <img src="{{ url_for('static', filename='img/yoga.png')}}" onclick="trocaImagem('static/img/yoga.png', 'Aulas de yoga e meditação', 'Aulas de yoga e meditação ao ar livre, ideais para relaxar e se harmonizar com o ambiente.')">
+
+            <img src="{{ url_for('static', filename='img/horta.png')}}" onclick="trocaImagem('static/img/horta.png', 'Oficinas de sustentabilidade', 'O tema das oficnas pode ser compostagem, reaproveitamento de materiais e plantio de hortas orgânicas, pois nessa atividade cuidamos do nosso espaço ecológico proprio do hotel.')">
+
+            <img src="{{ url_for('static', filename='img/gastronomia.png')}}" onclick="trocaImagem('static/img/gastronomia.png', 'Experiências gastronômicas', 'Experiências gastronômicas, com workshops sobre culinária natural e orgânica.')">
+
+            <img src="{{ url_for('static', filename='img/criança.png')}}" onclick="trocaImagem('static/img/criança.png', 'Atividades infantis', 'Atividades educativas infantis, voltadas para o aprendizado ambiental por meio de jogos e práticas ao ar livre.')">
+        </div>
+
+        <div id="form-atividade" class="formulario">
+            <h2>Increver-se na Atividade</h2>
+            <p><b>Atividade Selecionada:</b><span id="atividade-selecionada"></span></p>
+            <form id="inscreverForm" action="{{ url_for ('atividade_bp.pagina_atividade')}}" method="POST" >
+                <label>Nome:
+                    <input type="text" name="nome" id="nome" required>
+                </label><br>
+
+                <input type="hidden" id="atividade" name="atividade">
+
+                <label>E-mail:
+                    <input type="email" name="email" id="email" required>
+                </label><br>
+
+                <label>Dia:
+                    <input type="date" name="dia" id="dia" required>
+                </label><br>
+
+                <label>Participantes:
+                    <input type="number" name="participantes" id="participantes" min="1" max="4" value="1" required>
+                </label><br>
+
+                <button type="submit">Confimar inscrição</button>
+            </form>
+
+            <div id="mensagem">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{{url_for('static', filename='js/atividade.js')}}"></script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/suas_atividades.css')}}">
+    <title>Suas Atividades</title>
+</head>
+<body>
+    <div id="cabeçario">
+        <h1>Suas atividades: </h1>
+    </div>
+    <div id="atividades">
+        <table id="tabela-atividades">
+            <thead>
+                <tr>
+                    <th>Nomes</th>
+                    <th>Atividade</th>
+                    <th>Dia</th>
+                    <th>Participantes</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div id="form-edicao" class="form-edicao">
+        <h3 id="titulo-edicao">Atualizar atividade</h3>
+        <form id="formAtualizar">
+            <input type="hidden" id="edit-id">
+
+            <label>Nomes:</label>
+            <input type="text" id="edit-nome"><br>
+
+            <label>Participantes:</label>
+            <input type="number" id="edit-participantes"><br>
+
+            <div class="btn-edicao">
+                <button type="submit">Salvar alterações</button>
+            <button type="button" id="cancelar-edicao">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="{{url_for('static', filename='js/atividade_inscrita.js')}}"></script>
+</html>

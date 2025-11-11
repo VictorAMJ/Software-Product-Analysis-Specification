@@ -43,15 +43,15 @@
                     Cardápio digital
                 </button>
             </a>
-            <a href="#">
+            <a href="{{ url_for('atividade_bp.pagina_atividade') }}">
                 <button>
-                    <img src="{{ url_for('static', filename='img/atividades_icon.png') }}" alt="Atividades">
+                    <img src="{{ url_for('static', filename='img/yoga.png') }}" alt="Atividades">
                     Atividades recreativas
                 </button>
             </a>
-            <a href="#">
+            <a href="{{ url_for('atividade_bp.pagina_suas_atividades') }}">
                 <button>
-                    <img src="{{ url_for('static', filename='img/inscritas_icon.png') }}" alt="Atividades Inscritas">
+                    <img src="{{ url_for('static', filename='img/trilha.png') }}" alt="Atividades Inscritas">
                     Atividades inscritas
                 </button>
             </a>
