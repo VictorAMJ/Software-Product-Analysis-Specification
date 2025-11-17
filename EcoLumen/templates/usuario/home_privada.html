@@ -6,7 +6,6 @@
     <title>Home Privada</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home_privada.css') }}">
 
-    <!--checkin-->
     <script src="{{ url_for('static', filename='js/checkin.js') }}"></script>
 </head>
 <body>
@@ -24,7 +23,6 @@
             <h2>O que você fará hoje?</h2>
         </section>
 
-        <!--checkin-->
         <section id="checkin-section" class="checkin-container">
             <h2>Check-in</h2>
             <p id="mensagem-checkin">Carregando informações...</p>
@@ -53,6 +51,13 @@
                 <button>
                     <img src="{{ url_for('static', filename='img/trilha.png') }}" alt="Atividades Inscritas">
                     Atividades inscritas
+                </button>
+            </a>
+
+            <a href="{{ url_for('consumo_bp.monitorar_consumo')}}">
+                <button>
+                    <img src="" alt="">
+                    Monitorar Consumo
                 </button>
             </a>
         </section>

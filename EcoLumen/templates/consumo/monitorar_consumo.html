@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitorar Consumo</title>
+
+   
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/consumo.css') }}">
+    
+    <script src="{{ url_for('static', filename='js/consumo.js') }}" defer ></script>
+</head>
+<body>
+
+    <header class="header-consumo">
+        <h1>Monitoramento de Consumo</h1>
+    </header>
+
+    <p>
+        🌿 <strong>Entenda como funciona o cálculo e a premiação</strong><br><br>
+        Nesta página, você acompanha o <strong>consumo diário</strong> de água e energia do seu quarto,
+        comparado à média recomendada por pessoa definida pelo hotel.<br><br>
+
+        Cada barra representa o uso registrado no dia anterior. Durante a estadia, é normal haver variações,
+        já que alguns dias podem ter maior ou menor consumo — e isso faz parte do processo.<br><br>
+
+        Porém, para receber a premiação, o que vale é o <strong>cálculo final</strong>, realizado somente
+        no momento do seu <strong>checkout presencial</strong> no hotel.  
+        A premiação só é liberada se <strong>as duas metas forem atingidas:</strong><br><br>
+
+        ✔ Ficar abaixo da média de <strong>energia</strong> ao final da estadia<br>
+        ✔ Ficar abaixo da média de <strong>água</strong> ao final da estadia<br><br>
+
+        Se apenas uma meta for cumprida, não há premiação. Assim, incentivamos o uso consciente dos recursos
+        naturais durante toda a sua permanência.<br><br>
+
+        Obrigado por fazer parte dessa iniciativa e obrigado por fazer parte do EcoLumen! 🌎💚
+    </p>
+
+    <hr>
+
+    <p><strong>Médias diárias recomendadas por pessoa:</strong></p>
+    <p>Energia: <strong>50 kWh/dia</strong> | Água: <strong>150 L/dia</strong></p>
+
+    <div class="quarto" data-energia="40" data-agua="120">
+        <span>Quarto 101</span>
+
+        <p class="titulo-bloco">Energia (consumo do dia)</p>
+        <div class="barra-bg"><div class="barra energia-barra"></div></div>
+
+        <p class="titulo-bloco">Água (consumo do dia)</p>
+        <div class="barra-bg"><div class="barra agua-barra"></div></div>
+
+        <p class="premio"></p>
+    </div>
+
+    <div class="quarto" data-energia="55" data-agua="170">
+        <span>Quarto 102</span>
+
+        <p class="titulo-bloco">Energia (consumo do dia)</p>
+        <div class="barra-bg"><div class="barra energia-barra"></div></div>
+
+        <p class="titulo-bloco">Água (consumo do dia)</p>
+        <div class="barra-bg"><div class="barra agua-barra"></div></div>
+
+        <p class="premio"></p>
+    </div>
+
+    <div class="quarto" data-energia="60" data-agua="100">
+        <span>Quarto 103</span>
+
+        <p class="titulo-bloco">Energia (consumo do dia)</p>
+        <div class="barra-bg"><div class="barra energia-barra"></div></div>
+
+        <p class="titulo-bloco">Água (consumo do dia)</p>
+        <div class="barra-bg"><div class="barra agua-barra"></div></div>
+
+        <p class="premio"></p>
+    </div>
+
+    <div class="quarto" data-energia="35" data-agua="170">
+        <span>Quarto 104</span>
+
+        <p class="titulo-bloco">Energia (consumo do dia)</p>
+        <div class="barra-bg"><div class="barra energia-barra"></div></div>
+
+        <p class="titulo-bloco">Água (consumo do dia)</p>
+        <div class="barra-bg"><div class="barra agua-barra"></div></div>
+
+        <p class="premio"></p>
+    </div>
+</body>
+</html>

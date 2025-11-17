@@ -6,6 +6,7 @@ from models.atividade_model import criar_tabela_atividades
 from blueprints.usuario_bp import usuario_bp
 from blueprints.reserva_bp import reserva_bp
 from blueprints.atividade_bp import atividade_bp
+from blueprints.consumo_bp import consumo_bp
 
 
 app = Flask(__name__)
@@ -43,6 +44,7 @@ def rota_limpar_bd():
 app.register_blueprint(usuario_bp)
 app.register_blueprint(reserva_bp)
 app.register_blueprint(atividade_bp)
+app.register_blueprint(consumo_bp)
 
 if __name__ == "__main__":
     app.run(debug=True)

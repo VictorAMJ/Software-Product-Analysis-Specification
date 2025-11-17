@@ -9,10 +9,10 @@ function carregarCheckin() {
   
           data.reservas.forEach(r => {
             if (r.check_in) {
-              const partes = r.check_in.split("-"); // YYYY-MM-DD
+              const partes = r.check_in.split("-");
               if (partes.length === 3) {
                 const [ano, mes, dia] = partes;
-                const dataCheckin = new Date(ano, mes - 1, dia); // cria data local corretamente
+                const dataCheckin = new Date(ano, mes - 1, dia);
                 msg.innerHTML += `
                   📅 ${dataCheckin.toLocaleDateString("pt-BR")} — Você (${r.nome}) tem um pré check-in no hotel.<br>
                   Realizar o check-in às 14:00 na recepção do hotel.<br><br>
