@@ -7,6 +7,7 @@ from blueprints.usuario_bp import usuario_bp
 from blueprints.reserva_bp import reserva_bp
 from blueprints.atividade_bp import atividade_bp
 from blueprints.consumo_bp import consumo_bp
+from blueprints.cardapio_bp import cardapio_bp
 
 
 app = Flask(__name__)
@@ -45,6 +46,7 @@ app.register_blueprint(usuario_bp)
 app.register_blueprint(reserva_bp)
 app.register_blueprint(atividade_bp)
 app.register_blueprint(consumo_bp)
+app.register_blueprint(cardapio_bp)
 
 if __name__ == "__main__":
     app.run(debug=True)

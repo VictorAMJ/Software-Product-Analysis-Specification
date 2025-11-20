@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/cardapio.css')}}">
+    <title>Cardápio Digital</title>
+</head>
+<body>
+    <header>
+        <h1>Cardápio De Hoje:</h1>
+        <img src="/static/img/logo.jpg" alt="logo" id="logo">
+        <a href="{{ url_for('usuario_bp.home_privada') }}" id="button">Voltar</a>
+    </header>
+    <main>
+        <h2>Aqui no EcoLumen evitamos desperdício, por tanto fique por dentro no nosso cardárpio e nos avise se com certeza você vai ou não fazer essas refeições conosco.</h2>
+        
+        <div id="container">
+            <nav id="Refeicao">
+                <img src="/static/img/cafeManha.jpg" alt="café_da_manhã">
+                <div id="desc">
+                    <p>Nosso café da manhã conta com uma variedade de frutas frescas, pão de sal acompanhado de frios e queijos, bolacha doce, tapioca recheadas com frango cremoso, suco de uva integral, e chocolate quente.</p>
+                </div>
+                <div id="opcao">
+                    <input type="radio" name="Manha" id="ManhaSim">
+                    <label for="ManhaSim">Sim</label>
+
+                    <input type="radio" name="Manha" id="ManhaNao">
+                    <label for="ManhaNao">Não</label>
+
+                </div>
+            </nav>
+
+            <nav id="Refeicao">
+                <img src="/static/img/almoço.jpg" alt="almoço">
+                <div id="desc">
+                    <p>Para o almoço, o cardápio será, arroz basmati(arroz de origem indiana) acompanhado de feijão carioca engraçado com especiarias, filé de tilapia pré cozida e grelhada, e salada de folhas com cenoura ralada e molho aioli.</p>
+                </div>
+                <div id="opcao">
+                    <input type="radio" name="Almoço" id="AlmoçoSim">
+                    <label for="AlmoçoSim">Sim</label>
+
+                    <input type="radio" name="Almoço" id="AlmoçoNao">
+                    <label for="AlmoçoNao">Não</label>
+
+                </div>
+            </nav>
+            <nav id="Refeicao">
+                <img src="/static/img/cafeTarde.jpg" alt="café_da_tarde">
+                <div id="desc">
+                    <p>Para hoje, nosso café da tarde conta com pão brioche e pão de forma caseiros, ovos mexidos, bolacha de nata, frios e queijos, frutas frescas, e de bebidas, temos suco de melancia e vitamina de banana com mamão, leite integral.</p>
+                </div>
+                <div id="opcao">
+                    <input type="radio" name="Tarde" id="TardeSim">
+                    <label for="TardeSim">Sim</label>
+
+                    <input type="radio" name="Tarde" id="TardeNao">
+                    <label for="TardeNao">Não</label>
+
+                </div>
+            </nav>
+
+            <nav id="Refeicao">
+                <img src="/static/img/jantar.jpg" alt="jantar">
+                <div id="desc">
+                    <p>Para o jantar temos um delicioso espaguete à carbonara, acompanhado de purê de batatas inglesas, peito de frango grelhado em azeite e alho, legumes cozidos ao vapor, e por fim salada fria com folhas, tomate e pimentões picados em rodelas.</p>
+                </div>
+                <div id="opcao">
+                    <input type="radio" name="jantar" id="JantarSim">
+                    <label for="JantarSim">Sim</label>
+
+                    <input type="radio" name="jantar" id="JantarNao">
+                    <label for="JantarNao">Não</label>
+
+                </div>
+            </nav>
+        </div>
+        <button id="salvar">Salvar</button>
+    </main>
+</body>
+<script src="{{url_for('static', filename='js/cardapio.js')}}"></script>
+</html>
