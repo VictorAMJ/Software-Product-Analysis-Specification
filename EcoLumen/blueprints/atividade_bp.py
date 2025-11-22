@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, session, redirect, url_for
+from flask import Blueprint, render_template, request
 from controllers.atividade_controller import inscrever, listar_atividades_html, listar_atividades_hospede, atualizar_atividade_hospede, deletar_atividade_hospede
 
 

@@ -101,3 +101,17 @@ def verificar_reserva_por_data(email, dia_atividade):
     cursor.close()
     conexao.close()
     return reserva
+
+def verificar_pessoas_reserva(email):
+    email = str(email)
+    conexao = bd_config()
+    cursor = conexao.cursor()
+    cursor.execute("""
+        SELECT numero_hospedes
+        FROM reservas
+        WHERE email = %s
+    """, (email,))
+    qnt_pessoa = cursor.fetchone()
+    cursor.close()
+    conexao.close()
+    return qnt_pessoa[0]

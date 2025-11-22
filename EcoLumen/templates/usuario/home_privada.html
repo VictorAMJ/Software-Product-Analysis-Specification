@@ -11,8 +11,8 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>EcoLumen (logo do site)</h1>
-            <p>Bem-vindo, (nome do usuario)</p>
+            <h1>EcoLumen </h1>
+            <p>Bem-vindo, Max</p>
         </div>
             <a href="{{ url_for('usuario_bp.home_publica') }}" class="btn-logout">Sair</a>
         
@@ -35,7 +35,7 @@
                     Suas reservas
                 </button>
             </a>
-            <a href="{{ url_for('cardapio_bp.exibirTela') }}">
+            <a href="{{ url_for('cardapio_bp.pagina_refeicao') }}">
                 <button>
                     <img src="{{ url_for('static', filename='img/gastronomia.png') }}" alt="Cardápio Digital">
                     Cardápio digital
@@ -53,7 +53,6 @@
                     Atividades inscritas
                 </button>
             </a>
-
             <a href="{{ url_for('consumo_bp.monitorar_consumo')}}">
                 <button>
                     <img src="" alt="">
