@@ -41,7 +41,7 @@ def inserir_usuario(nome, email, senha, cpf, telefone):
 def buscar_usuario_email(email):
     conexao = bd_config()
     cursor = conexao.cursor()
-    cursor.execute("SELECT id, email, senha FROM usuarios WHERE email = %s", (email,))
+    cursor.execute("SELECT id, nome, email, senha FROM usuarios WHERE email = %s", (email,))
     resultado = cursor.fetchone()  
     cursor.close()
     conexao.close()

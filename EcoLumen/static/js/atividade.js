@@ -3,11 +3,11 @@ let titulo = document.getElementById("titulo-atividade")
 let descricao = document.getElementById("descricao-atividade")
 
 let atividade = [
-    {src: "static/img/trilha.png", titulo: "Trilha Ecológica", descricao: "Trilhas ecológicas guiadas, que percorrem áreas de mata nativa e apresentam a fauna e flora local."},
-    {src: "static/img/yoga.png", titulo: "Aulas de yoga e meditação", descricao: "Aulas de yoga e meditação ao ar livre, ideais para relaxar e se harmonizar com o ambiente."},
-    {src: "static/img/horta.png", titulo: "Oficinas de sustentabilidade", descricao: "O tema das oficnas pode ser compostagem, reaproveitamento de materiais e plantio de hortas orgânicas, pois nessa atividade cuidamos do nosso espaço ecológico proprio do hotel."},
-    {src: "static/img/gastronomia.png", titulo: "Experiências gastronômicas", descricao: "Experiências gastronômicas, com workshops sobre culinária natural e orgânica."},
-    {src: "static/img/criança.png", titulo: "Atividades infantis", descricao: "Atividades educativas infantis, voltadas para o aprendizado ambiental por meio de jogos e práticas ao ar livre."}
+    {src: "static/img/trilha.png", titulo: "Trilha <br><span>Ecológica</span>", descricao: "Trilhas ecológicas guiadas, que percorrem áreas de mata nativa e apresentam a fauna e flora local."},
+    {src: "static/img/yoga.png", titulo: "Aulas de <span>yoga e meditação</span>", descricao: "Aulas de yoga e meditação ao ar livre, ideais para relaxar e se harmonizar com o ambiente."},
+    {src: "static/img/horta.png", titulo: "Oficinas de <br><span>sustentabilidade</span>", descricao: "O tema das oficnas pode ser compostagem, reaproveitamento de materiais e plantio de hortas orgânicas, pois nessa atividade cuidamos do nosso espaço ecológico proprio do hotel."},
+    {src: "static/img/gastronomia.png", titulo: "Experiências <br><span>gastronômicas</span>", descricao: "Experiências gastronômicas, com workshops sobre culinária natural e orgânica."},
+    {src: "static/img/criança.png", titulo: "Atividades <br><span>infantis</span>", descricao: "Atividades educativas infantis, voltadas para o aprendizado ambiental por meio de jogos e práticas ao ar livre."}
 ];
 
 let index = 0;
@@ -66,6 +66,7 @@ document.getElementById("inscreverForm").addEventListener("submit", async functi
         if (resposta.ok) {
             document.getElementById("mensagem").textContent = resultado.mensagem || "Atividade reservada com sucesso!";
             document.getElementById("mensagem").style.color = "green";
+            window.location.href = "/home";
         } else {
             document.getElementById("mensagem").textContent = resultado.erro || "Erro ao registrar atividade.";
             document.getElementById("mensagem").style.color = "red";

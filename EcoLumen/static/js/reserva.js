@@ -124,6 +124,7 @@ document.getElementById("reservaForm").addEventListener("submit", function(e) {
             setTimeout(() => {
                 document.getElementById("form-reserva").style.display = "none";
                 mensagem.textContent = "";
+                window.location.href = "/home";
             }, 3500);
 
         } else {

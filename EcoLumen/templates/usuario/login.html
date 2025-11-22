@@ -14,11 +14,15 @@
 </head>
 <body>
     <div class="login-container">
+        <img src="/static/img/logo.jpg" alt="logo" id="logo">
         <h1>Login</h1>
         <form action="/login" method="POST" id="formulario_login">
             <input type="email" name="email" id="email" placeholder="Email" required> <br>
             <input type="password" name="senha" id="senha" placeholder="Senha" required> <br>
-            <button type="submit">Entrar</button>
+            <div class="opcs">
+                <button type="submit">Entrar</button>
+                <a href="{{ url_for('usuario_bp.home_publica') }}" id="button">Voltar</a>
+            </div>
         </form>
     </div>
 </body>

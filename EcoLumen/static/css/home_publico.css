@@ -8,11 +8,20 @@ body {
 
 .home_publica_container1 header {
     margin-bottom: 40px;
-    padding: 30px;
+    padding: 50px;
     background: rgba(1, 113, 67, 0.1);
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+}
+
+.home_publica_container1 #logo{
+    border: solid green;
+    position: absolute;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    height: 80px;
 }
 
 .home_publica_container1 header:hover {
@@ -51,7 +60,8 @@ body {
 
 .img_hotel img {
     width: 50%;
-    max-width: 550px;
+    min-height: 400px;
+    max-width: 300px;
     border-radius: 20px;
     margin: 10px 0;
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);

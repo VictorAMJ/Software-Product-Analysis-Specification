@@ -12,9 +12,10 @@
     <header>
         <div class="header-content">
             <h1>EcoLumen </h1>
-            <p>Bem-vindo, Max</p>
+            <p>Bem-vindo, {{nomeUsu}}!</p>
         </div>
-            <a href="{{ url_for('usuario_bp.home_publica') }}" class="btn-logout">Sair</a>
+        <img src="/static/img/logo.jpg" alt="logo" id="logo">
+        <a href="{{ url_for('usuario_bp.home_publica') }}" class="btn-logout">Sair</a>
         
     </header>
 
@@ -32,7 +33,7 @@
             <a href="{{ url_for('reserva_bp.pagina_reserva') }}">
                 <button>
                     <img src="{{ url_for('static', filename='img/Quarto3.png') }}" alt="Suas Reservas">
-                    Suas reservas
+                    Reservar Quarto
                 </button>
             </a>
             <a href="{{ url_for('cardapio_bp.pagina_refeicao') }}">
@@ -55,7 +56,7 @@
             </a>
             <a href="{{ url_for('consumo_bp.monitorar_consumo')}}">
                 <button>
-                    <img src="" alt="">
+                    <img src="{{ url_for('static', filename='img/consumo.jpg') }}" alt="">
                     Monitorar Consumo
                 </button>
             </a>

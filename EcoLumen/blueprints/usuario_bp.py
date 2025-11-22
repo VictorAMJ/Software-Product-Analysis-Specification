@@ -11,7 +11,8 @@ def home_publica():
 def home_privada():
     if "email" not in session:
         return redirect(url_for("usuario_bp.login"))
-    return render_template("usuario/home_privada.html")
+    nome = session["nome"]
+    return render_template("usuario/home_privada.html", nomeUsu = nome)
 
 @usuario_bp.route("/cadastro/")
 def cadastro():

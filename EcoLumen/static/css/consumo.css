@@ -6,6 +6,14 @@ body {
     line-height: 1.5;
 }
 
+#logo{
+    border: solid green;
+    display: flex;
+    margin: 0 800px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    height: 80px;
+}
 
 p {
     margin: 8px 0;

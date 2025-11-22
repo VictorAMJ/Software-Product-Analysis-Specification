@@ -7,6 +7,7 @@
     <title>Atividades recreativas</title>
 </head>
 <body>
+    <img src="/static/img/logo.jpg" alt="logo" id="logo">
     <div class="atividade-conteiner">
         <div id="atividade-detalhe" class="atividade-detalhe">
             <div class="caixa-de-texto">
@@ -21,15 +22,15 @@
         </div>
 
         <div class="menu-atividades">
-            <img src="{{ url_for('static', filename='img/trilha.png')}}" onclick="trocaImagem('static/img/trilha.png', 'Trilha Ecológica', 'Trilhas ecológicas guiadas, que percorrem áreas de mata nativa e apresentam a fauna e flora local.')">
+            <img src="{{ url_for('static', filename='img/trilha.png')}}" onclick="trocaImagem('static/img/trilha.png', 'Trilha <br> <span>Ecológica</span>', 'Trilhas ecológicas guiadas, que percorrem áreas de mata nativa e apresentam a fauna e flora local.')">
 
-            <img src="{{ url_for('static', filename='img/yoga.png')}}" onclick="trocaImagem('static/img/yoga.png', 'Aulas de yoga e meditação', 'Aulas de yoga e meditação ao ar livre, ideais para relaxar e se harmonizar com o ambiente.')">
+            <img src="{{ url_for('static', filename='img/yoga.png')}}" onclick="trocaImagem('static/img/yoga.png', 'Aulas de <span>yoga e meditação</span>', 'Aulas de yoga e meditação ao ar livre, ideais para relaxar e se harmonizar com o ambiente.')">
 
-            <img src="{{ url_for('static', filename='img/horta.png')}}" onclick="trocaImagem('static/img/horta.png', 'Oficinas de sustentabilidade', 'O tema das oficnas pode ser compostagem, reaproveitamento de materiais e plantio de hortas orgânicas, pois nessa atividade cuidamos do nosso espaço ecológico proprio do hotel.')">
+            <img src="{{ url_for('static', filename='img/horta.png')}}" onclick="trocaImagem('static/img/horta.png', 'Oficinas de <span>sustentabilidade</span>', 'O tema das oficnas pode ser compostagem, reaproveitamento de materiais e plantio de hortas orgânicas, pois nessa atividade cuidamos do nosso espaço ecológico proprio do hotel.')">
 
-            <img src="{{ url_for('static', filename='img/gastronomia.png')}}" onclick="trocaImagem('static/img/gastronomia.png', 'Experiências gastronômicas', 'Experiências gastronômicas, com workshops sobre culinária natural e orgânica.')">
+            <img src="{{ url_for('static', filename='img/gastronomia.png')}}" onclick="trocaImagem('static/img/gastronomia.png', 'Experiências <span>gastronômicas</span>', 'Experiências gastronômicas, com workshops sobre culinária natural e orgânica.')">
 
-            <img src="{{ url_for('static', filename='img/criança.png')}}" onclick="trocaImagem('static/img/criança.png', 'Atividades infantis', 'Atividades educativas infantis, voltadas para o aprendizado ambiental por meio de jogos e práticas ao ar livre.')">
+            <img src="{{ url_for('static', filename='img/criança.png')}}" onclick="trocaImagem('static/img/criança.png', 'Atividades <br><span>infantis</span>', 'Atividades educativas infantis, voltadas para o aprendizado ambiental por meio de jogos e práticas ao ar livre.')">
         </div>
 
         <div id="form-atividade" class="formulario">

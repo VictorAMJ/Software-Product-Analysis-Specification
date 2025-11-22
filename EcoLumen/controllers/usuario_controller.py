@@ -39,8 +39,9 @@ def login_usuario(request):
         senha = request.form["senha"]
 
         usuario = buscar_usuario_email(email)
-        if usuario and usuario[2] == senha:
-            session["email"] = usuario[1] 
+        if usuario and usuario[3] == senha:
+            session["email"] = usuario[2] 
+            session["nome"] = usuario[1]
             return "Login realizado com sucesso!"
         else:
             return "Email ou senha incorretos!"

@@ -5,6 +5,15 @@
     font-family: "Poppins", sans-serif;
 }
 
+#logo{
+    border: solid green;
+    position: absolute;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    height: 80px;
+}
+
 body {
     padding-top: 20px;
     padding-right: 100px;

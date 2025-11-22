@@ -24,6 +24,7 @@ function salvarCardapio() {
     .then(res => res.json())
     .then(data => {
         alert(data.mensagem || "Refeições Salvas com sucesso!");
+        window.location.href = "/home";
     })
     .catch(err => {
         console.error(err);
