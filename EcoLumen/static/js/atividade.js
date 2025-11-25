@@ -66,7 +66,9 @@ document.getElementById("inscreverForm").addEventListener("submit", async functi
         if (resposta.ok) {
             document.getElementById("mensagem").textContent = resultado.mensagem || "Atividade reservada com sucesso!";
             document.getElementById("mensagem").style.color = "green";
-            window.location.href = "/home";
+            setTimeout(() => {
+                window.location.href = "/home";
+            }, 3000);
         } else {
             document.getElementById("mensagem").textContent = resultado.erro || "Erro ao registrar atividade.";
             document.getElementById("mensagem").style.color = "red";
